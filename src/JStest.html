@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun(){
+            var usernameObj = document.getElementById("username");
+            // alert(usernameObj.value); 
+            var usernameText = usernameObj.value;
+            var patt = /^\w{5,12}$/;
+            if(patt.test(usernameText))
+            {
+                alert("legal!!");
+            }
+            else
+            {
+                alert("illegal");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    用户名:<input type="text" id = "username"  value="HEYU"/ >
+    <button onclick="onclickFun()" >校验</button>
+
+</body>
+</html>
